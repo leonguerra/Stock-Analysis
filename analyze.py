@@ -17,7 +17,7 @@ with PdfPages('stock_analysis.pdf') as pdf:
     for stock in stocks:
         symbol = stock["symbol"]
         name = stock["name"]
-        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&outputsize=compact&apikey={YOUR_API_KEY}0&datatype=csv'
+        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&outputsize=compact&apikey={YOUR_API_KEY}&datatype=csv'
         response = requests.get(url)
         data = response.content.decode('utf-8')
 
